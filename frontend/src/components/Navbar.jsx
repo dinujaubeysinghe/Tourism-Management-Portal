@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import logo from '../assets/react.svg'
 import { motion, AnimatePresence } from 'framer-motion'
+import logo from '../assets/logo/bstt logo.png'
 
 const links = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/events', label: 'Excursions' },
-  { to: '/voiceover', label: 'Activities' },
+  { to: '/excursions', label: 'Excursions' },
+  { to: '/activities', label: 'Activities' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -31,13 +31,13 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-tiffany-500/10 py-3 shadow-sm shadow-tiffany-500/5'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-forest-primary/10 py-3 shadow-sm shadow-forest-primary/5'
           : 'py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Wageesha Logo" className="w-12 object-contain" />
+          <img src={logo} alt="Logo" className="w-96  object-contain" />
         </NavLink>
 
         {/* Desktop links */}
@@ -98,7 +98,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-tiffany-500/10"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-forest-primary/10"
           >
             <ul className="flex flex-col px-6 py-4 gap-4">
               {links.map(({ to, label }) => (

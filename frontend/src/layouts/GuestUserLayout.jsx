@@ -7,15 +7,15 @@ export default function GuestLayout() {
     const { token, notification } = useStateContext();
 
     if (token) {
-        return <Navigate to="/" />;
+        return <Navigate to="/dashboard" />;
     }
 
     return (
         <>
-            <div className="flex h-screen">
+            <div className="flex min-h-screen flex-col">
                 <Navbar />
                 <main className="flex-1 overflow-auto flex flex-col">
-                    <div className="flex-1 pt-20">
+                    <div className="flex-1 pt-24">
                         <Outlet />
                     </div>
                     <Footer />
