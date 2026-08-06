@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaFacebookF, FaTripadvisor, FaWhatsapp } from 'react-icons/fa'
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
 import logo from '../assets/logo/bstt logo footer.png'
 
@@ -51,20 +51,30 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3 mt-6">
-              {[
-                { Icon: FaInstagram, label: 'Instagram' },
-                { Icon: FaFacebookF, label: 'Facebook' },
-                { Icon: FaYoutube, label: 'YouTube' },
-              ].map(({ Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-forest-dark hover:bg-forest-primary-light hover:border-forest-primary-light transition-colors duration-300"
-                >
-                  <Icon className="w-4 h-4" strokeWidth={1.5} />
-                </a>
-              ))}
+
+              <a
+                href='https://www.tripadvisor.com/Attraction_Review-g297895-d25310753-Reviews-Bentota_Samantha_Tours_Travels-Bentota_Galle_District_Southern_Province.html'
+                target='_blank'
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-forest-dark hover:bg-forest-primary-light hover:border-forest-primary-light transition-colors duration-300"
+              >
+                <FaTripadvisor className="w-4 h-4" strokeWidth={1.5} />
+              </a>
+
+              <a
+                href='https://web.facebook.com/bentotasamantha'
+                target='_blank'
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-forest-dark hover:bg-forest-primary-light hover:border-forest-primary-light transition-colors duration-300"
+              >
+                <FaFacebookF className="w-4 h-4" strokeWidth={1.5} />
+              </a>
+
+              <a
+                href='https://wa.me/94772408371'
+                target='_blank'
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-forest-dark hover:bg-forest-primary-light hover:border-forest-primary-light transition-colors duration-300"
+              >
+                <FaWhatsapp className="w-4 h-4" strokeWidth={1.5} />
+              </a>
             </div>
           </div>
         </div>
@@ -124,7 +134,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Find Us</h4>
             <div className="relative rounded-lg overflow-hidden h-32 border border-white/10">
               <iframe
-                src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14612.37368419686!2d79.99902610769485!3d6.416112685784983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2slk!4v1786045653411!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'grayscale(0.3) invert(0.9) contrast(0.9)' }}
