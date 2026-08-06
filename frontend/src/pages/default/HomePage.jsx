@@ -93,9 +93,9 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────────── */}
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-forest-dark">
+      <section className="relative h-screen min-h-150 w-full overflow-hidden bg-forest-dark">
         {/* Replace with your own background image */}
-        <img src={hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={hero} alt="hero" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-linear-to-b from-forest-dark/70 via-forest-dark/50 to-forest-dark" />
         <TopoLines />
 
@@ -104,7 +104,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-[1.05] max-w-4xl"
+            className="font-display text-5xl md:text-6xl lg:text-7xl  text-white leading-[1.05] max-w-4xl"
           >
             <span className="font-extrabold ">Ayubowan</span>
             <br />
@@ -115,7 +115,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-gray-300 mt-6 max-w-lg text-base sm:text-lg"
+            className="text-gray-300 font-display font-bold mt-6 max-w-lg text-base lg:text-lg text-md"
           >
             Bentota Samantha Tours & Travels
           </motion.p>
@@ -126,18 +126,18 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 mt-10"
           >
-            <a
-              href="#excursions"
+            <Link
+              to="/excursions"
               className="flex items-center justify-center gap-2 bg-forest-primary text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-forest-primary-light transition-colors"
             >
               Explore Excursions <ArrowRight className="w-4 h-4 " />
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="flex items-center justify-center gap-2 border border-white/30 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/10 transition-colors"
             >
               Our Story
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -165,7 +165,7 @@ export default function HomePage() {
             <img
               src={about2}
               alt="Guide leading a forest trail"
-              className="rounded-2xl w-full h-[420px] object-cover sm:block hidden"
+              className="rounded-2xl w-full h-105 object-cover sm:block hidden"
             />
             <img
               src={about1}
@@ -330,7 +330,7 @@ export default function HomePage() {
             From the trail log.
           </h2>
 
-          <div className="relative min-h-[220px] flex items-center justify-center">
+          <div className="relative min-h-55 flex items-center justify-center">
             <AnimatePresence mode="wait" custom={reviewDirection}>
               <motion.div
                 key={reviewIndex}
