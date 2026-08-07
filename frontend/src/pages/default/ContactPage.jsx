@@ -253,12 +253,12 @@ export default function ContactPage() {
 
                 {status === 'success' && (
                   <motion.p initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-forest-dark text-sm">
-                    Message sent — I'll get back to you soon.
+                    Message sent — We'll get back to you soon.
                   </motion.p>
                 )}
                 {status === 'error' && (
                   <motion.p initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-red-400 text-sm">
-                    Something went wrong. Please try again, or email me directly.
+                    Something went wrong. Please try again, or email us directly.
                   </motion.p>
                 )}
               </form>
