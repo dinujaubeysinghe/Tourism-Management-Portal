@@ -122,44 +122,47 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-forest-primary shrink-0" strokeWidth={1.5} />
-                <a href="mailto:contact.samantha@gmail.com" className="hover:text-forest-primary-light transition-colors">
-                  contact.samantha@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Map */}
-          <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Find Us</h4>
-            <div className="relative rounded-lg overflow-hidden h-32 border border-white/10">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14612.37368419686!2d79.99902610769485!3d6.416112685784983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2slk!4v1786045653411!5m2!1sen!2slk"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: 'grayscale(0.3) invert(0.9) contrast(0.9)' }}
-                loading="lazy"
-                title="Our Location"
-              />
-            </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Galle+Road+Bentota+Sri+Lanka"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-forest-primary hover:text-forest-primary-light mt-2 transition-colors"
-            >
-              Get directions <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
+              <a
+                href="mailto:bentotasamantha@yahoo.com"
+                className="hover:text-forest-primary-light transition-colors"
+              >
+                bentotasamantha<wbr />@yahoo.com
+              </a>
+            </li>
+          </ul>
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Bentota Samantha Tours & Travels. All rights reserved.
-          </p>
+        {/* Map */}
+        <div>
+          <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Find Us</h4>
+          <div className="relative rounded-lg overflow-hidden h-32 border border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14612.37368419686!2d79.99902610769485!3d6.416112685784983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2slk!4v1786045653411!5m2!1sen!2slk"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(0.3) invert(0.9) contrast(0.9)' }}
+              loading="lazy"
+              title="Our Location"
+            />
+          </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Galle+Road+Bentota+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs text-forest-primary hover:text-forest-primary-light mt-2 transition-colors"
+          >
+            Get directions <ArrowRight className="w-3 h-3" />
+          </a>
         </div>
       </div>
-    </footer>
+
+      {/* Bottom bar */}
+      <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center">
+        <p className="text-xs text-gray-500">
+          © {new Date().getFullYear()} Bentota Samantha Tours & Travels. All rights reserved.
+        </p>
+      </div>
+    </div>
+    </footer >
   )
 }

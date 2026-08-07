@@ -52,8 +52,8 @@ const infoCards = [
   {
     Icon: Mail,
     label: 'Email',
-    value: 'contact.samantha@gmail.com',
-    href: 'mailto:contact.samantha@gmail.com',
+    value: 'bentotasamantha@yahoo.com',
+    href: 'mailto:bentotasamantha@yahoo.com',
   },
   {
     Icon: Clock,
@@ -183,7 +183,7 @@ export default function ContactPage() {
                       name="from_name"
                       required
                       placeholder="Your name"
-                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
+                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
                     />
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                       name="from_email"
                       required
                       placeholder="your@email.com"
-                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
+                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
                     />
                   </div>
                 </div>
@@ -202,20 +202,20 @@ export default function ContactPage() {
                     <label className="text-xs text-gray-500 uppercase tracking-wider mb-2 block">Phone</label>
                     <input
                       type="tel"
-                      name="from_phone"
+                      name="phone"
                       required
                       placeholder="+1 234 567 890"
-                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
+                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
                     />
                   </div>
                   <div>
                     <label className="text-xs text-gray-500 uppercase tracking-wider mb-2 block">Country</label>
                     <input
                       type="text"
-                      name="from_country"
+                      name="country"
                       required
                       placeholder="Sri Lanka"
-                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
+                      className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
                     />
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     type="text"
                     name="subject"
                     placeholder="Trip enquiry, availability, custom request..."
-                    className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
+                    className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors"
                   />
                 </div>
 
@@ -237,7 +237,7 @@ export default function ContactPage() {
                     required
                     rows={5}
                     placeholder="Dates, group size, what you're hoping to see or do..."
-                    className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors resize-none"
+                    className="w-full bg-white/5 border border-forest-primary/20 rounded-lg px-4 py-3 text-sm text-forest-dark placeholder:text-gray-500 focus:outline-none focus:border-forest-primary transition-colors resize-none"
                   />
                 </div>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
                 </motion.button>
 
                 {status === 'success' && (
-                  <motion.p initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-forest-accent-light text-sm">
+                  <motion.p initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-forest-dark text-sm">
                     Message sent — I'll get back to you soon.
                   </motion.p>
                 )}
