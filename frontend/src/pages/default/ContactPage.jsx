@@ -121,7 +121,7 @@ export default function ContactPage() {
             Let's plan your <span className="forest-gradient">next trail</span>
           </motion.h1>
           <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-gray-300 text-base md:text-lg max-w-lg mx-auto mt-6">
-            Questions, custom trips, or just want to know what's in season reach out directly.
+            Bookings, custom trips, or just want to know what's in season reach out directly.
           </motion.p>
         </div>
       </section>
@@ -325,7 +325,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-      {/**/}
     </div>
   )
 }
