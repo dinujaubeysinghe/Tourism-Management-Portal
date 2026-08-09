@@ -8,7 +8,14 @@ export default function Footer() {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
 
-  const exploreLinks = ['Home', 'About', 'Excursions', 'Activities', 'Contact Us']
+  const exploreLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Excursions', href: '/excursions' },
+    { name: 'Activities', href: '/activities' },
+    { name: 'Contact Us', href: '/contact' }
+  ]
+
   const trailLinks = ['Ella Private Day Trip', 'Sinharaja Rainforest Trekking Private Day Trip', 'Galle & Benthota Full Day Tour From Colombo', 'Kandy Full Day Tour Private All Inclusive']
 
   return (
@@ -85,9 +92,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Explore</h4>
             <ul className="space-y-3">
               {exploreLinks.map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-gray-400 hover:text-forest-primary-light transition-colors">
-                    {item}
+                <li key={item.name}>
+                  <a href={item.href} className="text-sm text-gray-400 hover:text-forest-primary-light transition-colors">
+                    {item.name}
                   </a>
                 </li>
               ))}

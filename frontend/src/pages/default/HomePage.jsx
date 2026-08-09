@@ -12,10 +12,12 @@ import {
   Quote,
   Phone,
 } from 'lucide-react'
+import {FaTripadvisor} from 'react-icons/fa'
 import hero from '../../assets/home/hero.svg'
 import about1 from '../../assets/about/about5.jpg'
 import about2 from '../../assets/about/about4.webp'
 import cta from '../../assets/cta/cta2.jpg'
+import rate from '../../assets/home/ratings.jpg'
 
 {/*Data for the relevant sections*/ }
 const stats = [
@@ -46,6 +48,12 @@ const reviews = [
     location: 'United Kingdom',
     rating: 5,
     text: "I was only with Sam for a couple of days travelling from Bentota up to the Dambulla area and back but would highly recommend him.  He speaks excellent English, is very knowledgeable about the country, the wildlife, the culture etc.  And most important of all is an excellent driver - I felt very safe in on roads which actutally seem very dangerous with crazy bus drivers and hundreds of tuk-tuks. Would certainly contact him again if I want to do a tour in the future.  Thank you Sam!",
+  },
+  {
+    name: 'Laura G',
+    location: 'Australia',
+    rating: '5',
+    text: 'During our Sri Lanka holiday in Bentota (November 2025) we had the opportunity to meet Samantha. Since our stay was relatively short we decided to book with Samantha a 2-day tour to the mountains with an overnight stay. It was 2 days of fun and we learned a lot about the country and the people. Samantha speaks good German and of course English. He likes to respond to individual wishes and has been able to tell us a lot about ethnic groups , religions and the history of the country. He has always been punctual and reliable. We can highly recommend him with a clear conscience as an organizer and tour guide.  Thank you Sam!',
   },
   {
     name: 'Mary Kennedy',
@@ -304,12 +312,12 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a
-              href="#contact"
-              className="flex items-center justify-center gap-2 bg-forest-gold text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-forest-primary-light transition-colors"
+            <Link
+              to="/contact"
+              className="flex items-center justify-center gap-2 bg-forest-gold text-white font-semibold px-7 py-3 rounded-lg hover:bg-forest-primary-light transition-colors"
             >
               Plan Your Trip <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
             <a
               href="tel:+94772408371"
               className="flex items-center justify-center gap-2 border border-white/30 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/10 transition-colors"
@@ -397,6 +405,55 @@ export default function HomePage() {
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* ── TripAdvisor Rating ────────────────────────────────────────── */}
+      <section className="bg-gray-50 py-24 px-6 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl shadow-lg shadow-forest-dark/5 border border-gray-100 overflow-hidden grid grid-cols-1 md:grid-cols-2"
+          >
+            {/* Screenshot */}
+            <div className="relative bg-gray-100">
+              <img
+                src={rate}
+                alt="TripAdvisor rating for Bentota Samantha Tours & Travels"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Text + CTA */}
+            <div className="p-8 sm:p-12 flex flex-col justify-center">
+              <div className="w-12 h-12 rounded-full bg-forest-primary-light/95 flex items-center justify-center mb-6">
+                <FaTripadvisor className="w-6 h-6 text-forest-dark" />
+              </div>
+
+              <p className="text-forest-primary text-xs uppercase tracking-[0.3em] font-semibold mb-3">
+                Trusted by Travelers
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl text-forest-dark mb-4 leading-tight">
+                Rated by real travelers on TripAdvisor
+              </h2>
+              <p className="text-forest-text leading-relaxed mb-8">
+                Every trip I run is reviewed publicly. See what past guests have said
+                before you book yours.
+              </p>
+
+              <Link
+                to="https://www.tripadvisor.com/Attraction_Review-g297895-d25310753-Reviews-Bentota_Samantha_Tours_Travels-Bentota_Galle_District_Southern_Province.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-forest-primary text-white font-semibold text-sm px-6 py-3.5 rounded-lg hover:bg-forest-primary-light transition-colors w-fit"
+              >
+                View Reviews on TripAdvisor <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
