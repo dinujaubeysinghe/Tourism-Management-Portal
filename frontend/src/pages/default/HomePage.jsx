@@ -90,12 +90,14 @@ export default function HomePage() {
   const navigate = useNavigate();
   const [reviewIndex, setReviewIndex] = useState(0)
   const [reviewDirection, setReviewDirection] = useState(1)
+  const [showAllExcursions, setShowAllExcursions] = useState(false)
 
   const goToReview = (dir) => {
     setReviewDirection(dir)
     setReviewIndex((prev) => (prev + dir + reviews.length) % reviews.length)
   }
 
+  const visibleExcursions = showAllExcursions ? excursions : excursions.slice(0, 3)
   const activeReview = reviews[reviewIndex]
 
   return (
@@ -238,7 +240,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {excursions.map((trip, i) => (
+            {visibleExcursions.map((trip, i) => (
               <motion.a
                 key={trip.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -283,12 +285,13 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex justify-center mt-16">
-          <Link
-            to="/excursions"
-            className=" inline-flex items-center gap-2 text-forest-primary font-semibold hover:bg-forest-primary hover:text-white rounded-full border px-8 py-3"
+          <button
+            type="button"
+            onClick={() => setShowAllExcursions((prev) => !prev)}
+            className="inline-flex items-center gap-2 text-forest-primary font-semibold hover:bg-forest-primary hover:text-white rounded-full border px-8 py-3 transition-colors"
           >
-            View All Excursions
-          </Link>
+            {showAllExcursions ? 'See Less' : 'See More'}
+          </button>
         </div>
       </section>
 

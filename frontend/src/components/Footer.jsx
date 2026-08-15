@@ -164,9 +164,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center">
+      <div className="pt-6 border-t border-white/10 flex justify-center">
         <p className="text-xs text-gray-500">
-          © {new Date().getFullYear()} Bentota Samantha Tours & Travels. All rights reserved.
+          Bentota Samantha Tours &amp; Travels. All rights reserved.
         </p>
       </div>
     </div>
