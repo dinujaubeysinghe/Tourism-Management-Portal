@@ -31,13 +31,13 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-forest-primary/10 py-3 shadow-sm shadow-forest-primary/5'
-          : 'py-6'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-forest-primary/10 py-2 shadow-sm shadow-forest-primary/5'
+          : 'py-2.5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Logo" className="w-96  object-contain" />
+          <img src={logo} alt="Logo" className="w-52 sm:w-60 md:w-72 object-contain" />
         </NavLink>
 
         {/* Desktop links */}
