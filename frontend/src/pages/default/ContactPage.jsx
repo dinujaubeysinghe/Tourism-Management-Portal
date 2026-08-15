@@ -160,14 +160,14 @@ export default function ContactPage() {
 
       {/* ── Form + Map ───────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.5fr_0.9fr] gap-10 lg:gap-12">
           {/* Form — glass card on dark panel */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-3 relative rounded-3xl overflow-hidden bg-white shadow-2xl p-8 sm:p-12"
+            className="lg:col-span-1 relative rounded-3xl overflow-hidden bg-white shadow-2xl p-8 sm:p-12"
           >
             <TopoLines opacity={0.06} count={4} />
             <div className="relative">
@@ -271,9 +271,9 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="lg:col-span-2 flex flex-col gap-6"
+            className="lg:col-span-1 flex flex-col gap-6 lg:max-w-[420px] lg:justify-self-end"
           >
-            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-64 sm:h-80 lg:h-full lg:min-h-75">
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-56 sm:h-72 lg:h-[420px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14612.37368419686!2d79.99902610769485!3d6.416112685784983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2slk!4v1786045653411!5m2!1sen!2slk"  
                 allowfullscreen="" 
@@ -281,8 +281,7 @@ export default function ContactPage() {
                 referrerpolicy="strict-origin-when-cross-origin"
                 width="800"
                 height="600"
-                style={{ border: 0 }}
-                loading="lazy"
+                style={{ border: 0, width: '100%', height: '100%' }}
                 title="Location"
               />
             </div>
